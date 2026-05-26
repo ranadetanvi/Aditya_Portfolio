@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+
+display:flex;
+justify-content:center;  
+}
+
+.container{
+padding:70px 90px;
+width:100%;
+max-width:1400px;
+}
+
+/* INTRO */
+
+h1{
+font-size:72px;
+margin-bottom:10px;
+animation:slideDown 1s ease;
+}
+
+.role{
+font-size:26px;
+color:#cfcfcf;
+margin-bottom:100px;
+}
+
+/* QUESTION */
+
+.question{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.scroll{
+font-size:18px;
+color:#aaa;
+margin-bottom:90px;
+}
+
+/* WORK SECTION */
+
+.work-section{
+margin-bottom:120px;
+}
+
+.work-heading{
+font-size:35px;
+margin-bottom:45px;
+}
+
+.video-grid{
+display:flex;
+gap:35px;
+flex-wrap:wrap;
+}
+
+.video-card{
+width:360px;
+cursor:pointer;
+transition:.4s;
+}
+
+.video-card:hover{
+transform:translateY(-12px);
+}
+
+.video-card video{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+box-shadow:0 10px 40px rgba(255,255,255,.08);
+transition:.4s;
+}
+
+.video-card:hover video{
+transform:scale(1.03);
+}
+
+.video-card p{
+margin-top:14px;
+font-size:18px;
+color:#d5d5d5;
+}
+
+/* ABOUT */
+
+.creator-title{
+font-size:52px;
+line-height:1.2;
+margin-bottom:35px;
+}
+
+.about{
+max-width:680px;
+font-size:20px;
+line-height:1.8;
+color:#d8d8d8;
+}
+
+/* CONTACT */
+
+.contact-section{
+display:flex;
+align-items:flex-start;
+gap:70px;
+margin-top:60px;
+}
+
+.work{
+font-size:58px;
+font-weight:bold;
+line-height:.9;
+cursor:pointer;
+transition:.4s;
+}
+
+.work:hover{
+transform:translateY(-8px);
+color:#bfbfbf;
+}
+
+.contact{
+font-size:19px;
+line-height:2;
+color:#e2e2e2;
+}
+
+/* POPUP */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal video{
+width:85%;
+max-width:1200px;
+border-radius:18px;
+}
+
+.close{
+position:absolute;
+top:25px;
+right:40px;
+font-size:50px;
+cursor:pointer;
+color:white;
+}
+
+.contact a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.contact a:hover{
+color:#bbbbbb;
+}
+
+/* ANIMATION */
+
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.container{
+padding:40px 25px;
+}
+
+h1{
+font-size:46px;
+}
+
+.question,
+.work-heading,
+.creator-title{
+font-size:34px;
+}
+
+.video-card{
+width:100%;
+}
+
+.contact-section{
+flex-direction:column;
+gap:35px;
+}
+
+.work{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Hi I’m Aditya Belsare</h1>
+
+<p class="role">Video Editor | Animator</p>
+
+<h2 class="question">
+Want to Know WHO I AM ?
+</h2>
+
+<p class="scroll">
+Scroll down and enter into my creative world
+</p>
+
+<!-- WORK -->
+
+<div class="work-section">
+
+<h2 class="work-heading">
+MY WORK
+</h2>
+
+<div class="video-grid">
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit1.mp4">
+
+<source src="edit1.mp4" type="video/mp4">
+
+</video>
+
+<p>Cinematic Edit</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit2.mp4">
+
+<source src="edit2.mp4" type="video/mp4">
+
+</video>
+
+<p>Motion Graphics</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit3.mp4">
+
+<source src="edit3.mp4" type="video/mp4">
+
+</video>
+
+<p>Animation Reel</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit4.mp4">
+
+<source src="edit4.mp4" type="video/mp4">
+
+</video>
+
+<p>Animation Reel</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit5.mp4">
+
+<source src="edit5.mp4" type="video/mp4">
+
+</video>
+
+<p>Animation Reel</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit6.mp4">
+
+<source src="edit6.mp4" type="video/mp4">
+
+</video>
+
+<p>Animation Reel</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit7.mp4">
+
+<source src="edit7.mp4" type="video/mp4">
+
+</video>
+
+<p>Animation Reel</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit8.mp4">
+
+<source src="edit8.mp4" type="video/mp4">
+
+</video>
+
+<p>Animation Reel</p>
+
+</div>
+
+<div class="video-card">
+
+<video class="preview"
+autoplay
+muted
+loop
+playsinline
+data-video="edit9.mp4">
+
+<source src="edit9.mp4" type="video/mp4">
+
+</video>
+
+<p>Animation Reel</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<h2 class="creator-title">
+You have seen my work ....<br>
+Now Meet the Creator
+</h2>
+
+<p class="about">
+Hi, I’m Aditya Belsare — a passionate video editor and animator creating cinematic, engaging, and visually impactful content. I transform ideas and raw footage into smooth edits and creative animations that capture attention and leave a lasting impression.
+</p>
+
+<!-- CONTACT -->
+
+<div class="contact-section">
+
+<div class="work">
+WORK<br>
+WITH<br>
+ME
+</div>
+
+<div class="contact">
+
+<a href="mailto:adityabelsare0503@gmail.com">
+adityabelsare0503@gmail.com
+</a>
+
+<p>
+<a href="https://www.instagram.com/aditya.0503?igsh=MTh2MDk1Zm1sZGV0Zg==" target="_blank">
+@aditya.0503
+</a>
+</p>
+
+<a href="tel:+918261834811">
++91 8261834811
+</a>
+
+<p>Kothrud, Pune 38</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- POPUP -->
+
+<div class="modal" id="videoModal">
+
+<span class="close">&times;</span>
+
+<video id="popupVideo" controls></video>
+
+</div>
+
+<script>
+
+/* SELECT ELEMENTS */
+
+const previews =
+document.querySelectorAll(".preview");
+
+const modal =
+document.getElementById("videoModal");
+
+const popupVideo =
+document.getElementById("popupVideo");
+
+const closeBtn =
+document.querySelector(".close");
+
+/* OPEN POPUP */
+
+previews.forEach(video=>{
+
+video.addEventListener("click",()=>{
+
+const src =
+video.getAttribute("data-video");
+
+popupVideo.src = src;
+
+modal.style.display = "flex";
+
+popupVideo.muted = false;
+
+popupVideo.play();
+
+});
+
+});
+
+/* CLOSE BUTTON */
+
+closeBtn.addEventListener("click",()=>{
+
+modal.style.display = "none";
+
+popupVideo.pause();
+
+popupVideo.currentTime = 0;
+
+});
+
+/* CLICK OUTSIDE CLOSE */
+
+modal.addEventListener("click",(e)=>{
+
+if(e.target===modal){
+
+modal.style.display="none";
+
+popupVideo.pause();
+
+popupVideo.currentTime=0;
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
